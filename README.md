@@ -28,7 +28,7 @@ This was mostly a fun side project made in a day not in any way a production rea
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/db-mcp.git
+git clone https://github.com/cruelkratos/dbms-mcp-server.git
 cd db-mcp
 uv sync
 ```
@@ -139,3 +139,4 @@ MIT License
 [MCP Documentation](https://modelcontextprotocol.io/docs/learn/architecture)
 
 Developed by cruelkratos😽 
+
