@@ -34,33 +34,33 @@ class Repository(IRepository):
         )
         self.cursor = self.conn.cursor()
 
-    def find_by_id(self, id):
+    async def find_by_id(self, id):
         try:
             self.cursor.execute("SELECT * FROM person WHERE id = %s", (id,))
-            return self.cursor.fetchone()
+            return await self.cursor.fetchone()
         except Exception as e:
             print(f"Error finding by id: {e}")
             return None
 
-    def find_by_name(self, name):
+    async def find_by_name(self, name):
         try:
             self.cursor.execute("SELECT * FROM person WHERE name = %s", (name,))
-            return self.cursor.fetchall()
+            return await self.cursor.fetchall()
         except Exception as e:
             print(f"Error finding by name: {e}")
             return None
 
-    def add_field(self, id, name, age, gender):
+    async def add_field(self, id, name, age, gender):
         try:
             self.cursor.execute(
                 "INSERT INTO person (id, name, age, gender) VALUES (%s, %s, %s, %s)",
                 (id, name, age, gender)
             )
-            self.conn.commit()
+            await self.conn.commit()
             return True
         except Exception as e:
             print(f"Error adding field: {e}")
-            self.conn.rollback()
+            await self.conn.rollback()
             return False
 
     def __del__(self):
