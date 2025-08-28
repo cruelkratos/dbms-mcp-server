@@ -1,6 +1,6 @@
 # db-mcp
 
-A minimal Python MCP (Multi-Component Platform) server for managing and querying a PostgreSQL database. This project uses a repository pattern for database access and exposes endpoints for searching and adding records to a `person` table. Designed for integration with Claude MCP client.
+A minimal Python MCP server for managing and querying a PostgreSQL database. This project uses a repository pattern for database access and exposes endpoints for searching and adding records to a `person` table. Designed for integration with Claude MCP client.
 
 
 *This was mostly a fun side project made in a day not in any way a production ready MCP server, i wanted to see how i could use Copilot or Claude Desktop (or Cursor) like MCP Clients to actually interact and call tools (A simple POSTGRESQL call in this case), this was a fun learning expirience for me :)*
@@ -141,5 +141,6 @@ MIT License
 [MCP Documentation](https://modelcontextprotocol.io/docs/learn/architecture)
 
 Developed by cruelkratos😽 
+
 
 
